@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "author-name": "Kaniz Fatema",
+    "title": "How to get your first job as a self-taught programmer",
+    "blog-img": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
+    "author-img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "read-time": 5,
+    "publish-date": "5-5-22"
+  },
+  {
+    "id": 2,
+    "author-name": "Kadija Asha",
+    "title": "How to get your first job as a self-taught programmer",
+    "blog-img": "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+    "author-img": "https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
+    "read-time": 10,
+    "publish-date": "14-7-22"
+  },
+  {
+    "id": 3,
+    "author-name": "Orin Urmila",
+    "title": "How to get your first job as a self-taught programmer",
+    "blog-img": "https://images.unsplash.com/photo-1521185496955-15097b20c5fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
+    "author-img": "https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    "read-time": 8,
+    "publish-date": "2-3-23"
+  },
+  {
+    "id": 4,
+    "author-name": "Moon",
+    "title": "How to get your first job as a self-taught programmer",
+    "blog-img": "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+    "author-img": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=853&q=80",
+    "read-time": 12,
+    "publish-date": "6-2-23"
+  }
+]
