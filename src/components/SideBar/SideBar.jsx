@@ -26,11 +26,13 @@ const SideBar = ({ readTime, bookmark }) => {
         <h3 className="text-xl font-bold text-center">
           BookMarked Blogs:{bookMark ? bookMark.length : 0}
         </h3>
-        {bookMark.map((bk) => (
-          <div className="text-center bg-white font-semibold text-lg m-1 rounded">
-            <h3>{bk.title}</h3>
-          </div>
-        ))}
+        {bookMark
+          ? bookMark.map((bk) => (
+              <div className="text-center bg-white font-semibold text-lg m-1 rounded">
+                <h3>{bk.title}</h3>
+              </div>
+            ))
+          : null}
       </div>
     </div>
   );
