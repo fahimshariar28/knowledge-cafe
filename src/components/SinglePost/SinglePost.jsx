@@ -4,8 +4,8 @@ import "./SinglePost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
-const SinglePost = ({ post, handleReadTime }) => {
-  const { blogImg, authorName, authorImg, publishDate, time } = post;
+const SinglePost = ({ id, post, handleReadTime, handleBookMark }) => {
+  const { title, blogImg, authorName, authorImg, publishDate, time } = post;
   return (
     <div className="mt-10">
       <div>
@@ -26,15 +26,13 @@ const SinglePost = ({ post, handleReadTime }) => {
             <p>
               {time}
               min read
-              <span className="cursor-pointer ms-2">
+              <button className="ms-2">
                 <FontAwesomeIcon icon={faBookmark} />
-              </span>
+              </button>
             </p>
           </div>
         </div>
-        <h2 className="text-4xl font-bold">
-          How to get your first job as a self-taught programmer
-        </h2>
+        <h2 className="text-4xl font-bold">{title}</h2>
         <button
           onClick={() => handleReadTime(time)}
           className="underline text-blue-500"

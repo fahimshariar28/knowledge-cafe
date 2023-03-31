@@ -5,9 +5,19 @@ import SideBar from "../SideBar/SideBar";
 
 const Home = () => {
   const [readTime, setReadTime] = useState(0);
+
   const handleReadTime = (time) => {
-    setReadTime(time);
+    const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
+    if (previousReadTime) {
+      const sum = previousReadTime + time;
+      localStorage.setItem("readTime", sum);
+      setReadTime(sum);
+    } else {
+      localStorage.setItem("readTime", time);
+      setReadTime(time);
+    }
   };
+
   return (
     <div className="grid grid-cols-3 gap-3">
       <div className="col-span-2">
