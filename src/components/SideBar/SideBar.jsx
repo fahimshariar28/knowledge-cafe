@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./SideBar.css";
 
 const SideBar = ({ readTime }) => {
-  //   console.log(props);
-
   const [time, setTime] = useState(0);
   useEffect(() => {
     let updatedReadTime = 0;
