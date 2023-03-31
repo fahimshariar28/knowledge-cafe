@@ -4,7 +4,7 @@ import "./SinglePost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
-const SinglePost = ({ post }) => {
+const SinglePost = ({ post, handleReadTime }) => {
   const { blogImg, authorName, authorImg, publishDate, time } = post;
   return (
     <div className="mt-10">
@@ -12,7 +12,11 @@ const SinglePost = ({ post }) => {
         <img className="w-full rounded-md" src={blogImg} alt="" />
         <div className="mt-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img className="w-12 rounded-[50%]" src={authorImg} alt="" />
+            <img
+              className="w-12 rounded-[50%] aspect-square"
+              src={authorImg}
+              alt=""
+            />
             <div>
               <h4 className="text-xl font-semibold">{authorName}</h4>
               <p>Publish in: {publishDate}</p>
@@ -31,7 +35,12 @@ const SinglePost = ({ post }) => {
         <h2 className="text-4xl font-bold">
           How to get your first job as a self-taught programmer
         </h2>
-        <p className="underline cursor-pointer text-blue-500">Mark as Read</p>
+        <button
+          onClick={() => handleReadTime(time)}
+          className="underline text-blue-500"
+        >
+          Mark as Read
+        </button>
       </div>
     </div>
   );

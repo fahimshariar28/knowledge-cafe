@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Posts from "../Posts/Posts";
+import SideBar from "../SideBar/SideBar";
 
 const Home = () => {
+  const [readTime, setReadTime] = useState(0);
+  const handleReadTime = (time) => {
+    setReadTime(time);
+  };
   return (
     <div className="grid grid-cols-3 gap-3">
       <div className="col-span-2">
-        <Posts></Posts>
+        <Posts handleReadTime={handleReadTime}></Posts>
       </div>
       <div>
-        <p>sidebar</p>
+        <SideBar readTime={readTime}></SideBar>
       </div>
     </div>
   );
