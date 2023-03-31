@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Posts from "../Posts/Posts";
 import SideBar from "../SideBar/SideBar";
 
@@ -29,7 +31,9 @@ const Home = () => {
       );
 
       if (isThisBookMarked) {
-        console.log("object");
+        toast.error("Already Added", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
       } else {
         newBookmark.push(...previousBookmark, bookmarkBlog);
         localStorage.setItem("bookmark", JSON.stringify(newBookmark));
@@ -42,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="lg:grid grid-cols-3 gap-3">
       <div className="col-span-2">
         <Posts
           handleBookMark={handleBookMark}
@@ -52,6 +56,7 @@ const Home = () => {
       <div>
         <SideBar bookmark={bookmark} readTime={readTime}></SideBar>
       </div>
+      <ToastContainer />
     </div>
   );
 };
