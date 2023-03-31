@@ -4,8 +4,8 @@ import "./SinglePost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
-const SinglePost = ({ id, post, handleReadTime, handleBookMark }) => {
-  const { title, blogImg, authorName, authorImg, publishDate, time } = post;
+const SinglePost = ({ post, handleReadTime, handleBookMark }) => {
+  const { id, title, blogImg, authorName, authorImg, publishDate, time } = post;
   return (
     <div className="mt-10">
       <div>
@@ -26,7 +26,10 @@ const SinglePost = ({ id, post, handleReadTime, handleBookMark }) => {
             <p>
               {time}
               min read
-              <button className="ms-2">
+              <button
+                onClick={() => handleBookMark(id, title)}
+                className="ms-2"
+              >
                 <FontAwesomeIcon icon={faBookmark} />
               </button>
             </p>

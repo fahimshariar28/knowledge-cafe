@@ -5,6 +5,7 @@ import SideBar from "../SideBar/SideBar";
 
 const Home = () => {
   const [readTime, setReadTime] = useState(0);
+  const [bookmark, setBookmark] = useState([]);
 
   const handleReadTime = (time) => {
     const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
@@ -18,13 +19,38 @@ const Home = () => {
     }
   };
 
+  const handleBookMark = (id, title) => {
+    const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
+    let newBookmark = [];
+    const bookmarkBlog = { id, title };
+    if (previousBookmark) {
+      const isThisBookMarked = previousBookmark.find(
+        (marked) => marked.id == id
+      );
+
+      if (isThisBookMarked) {
+        console.log("object");
+      } else {
+        newBookmark.push(...previousBookmark, bookmarkBlog);
+        localStorage.setItem("bookmark", JSON.stringify(newBookmark));
+      }
+    } else {
+      newBookmark.push(bookmarkBlog);
+      localStorage.setItem("bookmark", JSON.stringify(newBookmark));
+    }
+    setBookmark(newBookmark);
+  };
+
   return (
     <div className="grid grid-cols-3 gap-3">
       <div className="col-span-2">
-        <Posts handleReadTime={handleReadTime}></Posts>
+        <Posts
+          handleBookMark={handleBookMark}
+          handleReadTime={handleReadTime}
+        ></Posts>
       </div>
       <div>
-        <SideBar readTime={readTime}></SideBar>
+        <SideBar bookmark={bookmark} readTime={readTime}></SideBar>
       </div>
     </div>
   );

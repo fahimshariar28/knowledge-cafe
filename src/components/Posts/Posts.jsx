@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SinglePost from "../SinglePost/SinglePost";
 import "./Posts.css";
 
-const Posts = ({ handleReadTime }) => {
+const Posts = ({ handleReadTime, handleBookMark }) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     fetch("data.json")
@@ -13,6 +13,7 @@ const Posts = ({ handleReadTime }) => {
     <div>
       {posts.map((post) => (
         <SinglePost
+          handleBookMark={handleBookMark}
           handleReadTime={handleReadTime}
           post={post}
           key={post.id}
